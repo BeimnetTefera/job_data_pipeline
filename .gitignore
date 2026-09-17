@@ -4,4 +4,4 @@ __pycache__/
 .env
 .databricks/
 .vscode/
-*.egg-info/
+*.egg-info/notebooks/
