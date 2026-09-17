@@ -1,4 +1,4 @@
 name: remoteok
 type: api
-endpoint: https://remoteok.io/api/v1/jobs
+endpoint: https://remoteok.com/api
 raw_path: /Volumes/job_market/raw/remoteok
