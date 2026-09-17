@@ -5,13 +5,13 @@ import requests
 from src.common.config import load_source_config
 from src.common.run_log import log_stage_start, log_stage_end
 
-def fetch_ann_save(spark, run_id: str, source_name: str = "remoteok") -> dict:
+def fetch_and_save(spark, run_id: str, source_name: str = "remoteok") -> dict:
     """Fetch and save job data from RemoteOK."""
     config = load_source_config(source_name)
     log_stage_start(spark, run_id, source_name, "ingestion")
 
     try:
-        response = response.get(
+        response = requests.get(
             config["endpoint"],
             timeout=30,
         )
